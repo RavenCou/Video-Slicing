@@ -1,0 +1,50 @@
+{
+  "api": {
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "api_key_env": "QWEN_API_KEY",
+    "models": {
+      "vision": "qwen-vl-max",
+      "asr": "qwen3-asr-flash",
+      "llm": "qwen-plus"
+    },
+    "flash_models": {
+      "vision": "qwen-vl-flash",
+      "asr": "qwen3-asr-flash"
+    },
+    "use_flash": false,
+    "timeout": 120000,
+    "max_retries": 3
+  },
+  "video": {
+    "supported_platforms": ["douyin.com", "xiaohongshu.com", "bilibili.com"],
+    "min_duration": 5,
+    "max_duration": 300,
+    "default_analysis_method": "keyframe_sampling",
+    "sampling": {
+      "target_frames": 30,
+      "default_interval": 3,
+      "use_fixed_interval": true
+    }
+  },
+  "templates": {
+    "default_breakdown": "default",
+    "default_rewrite": "default"
+  },
+  "ui": {
+    "interactive_mode": false,
+    "auto_confirm": true
+  },
+  "output": {
+    "formats": ["markdown", "table"],
+    "charset": "utf-8",
+    "auto_open_html": true
+  },
+  "cache": {
+    "enabled": true,
+    "video_dir": "cache/videos",
+    "audio_dir": "cache/audio",
+    "keyframes_dir": "cache/keyframes",
+    "analysis_dir": "cache/analysis"
+  },
+  "version": "1.0.0"
+}

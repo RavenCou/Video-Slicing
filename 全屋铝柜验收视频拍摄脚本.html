@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全屋铝柜验收视频拍摄脚本（120秒）</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin-top: 10px;
+        }
+
+        .meta-info {
+            background: #f8f9fa;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .meta-icon {
+            font-size: 1.5em;
+        }
+
+        .meta-content strong {
+            display: block;
+            color: #667eea;
+            font-size: 0.9em;
+        }
+
+        .meta-content span {
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        nav {
+            background: #667eea;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section h2::before {
+            content: '▶';
+            font-size: 0.8em;
+        }
+
+        .subsection {
+            margin-bottom: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #667eea;
+        }
+
+        .subsection h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1em;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        .time-badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .dialogue {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            border-radius: 5px;
+            font-style: italic;
+            margin: 8px 0;
+        }
+
+        .subtitle-text {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 12px;
+            border-radius: 5px;
+            margin: 8px 0;
+        }
+
+        .warning-box {
+            background: #ffebee;
+            border: 2px solid #f44336;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .warning-box h4 {
+            color: #f44336;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 12px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #4caf50;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .checklist li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .checklist li::before {
+            content: '☐';
+            font-size: 1.5em;
+            color: #4caf50;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border-top: 4px solid #667eea;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .card h4 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin: 5px 5px 5px 0;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #667eea;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff9c4 0%, #ffe082 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #ffc107;
+        }
+
+        .highlight-box h4 {
+            color: #f57c00;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .print-btn:hover {
+            background: #764ba2;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .print-btn, nav {
+                display: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            .meta-info {
+                grid-template-columns: 1fr;
+            }
+            table {
+                font-size: 0.9em;
+            }
+            th, td {
+                padding: 10px;
+            }
+            nav a {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 全屋铝柜验收视频拍摄脚本</h1>
+            <p class="subtitle">120秒实拍演示 + 快速剪辑 | 抖音/快手/视频号/小红书</p>
+        </header>
+
+        <div class="meta-info">
+            <div class="meta-item">
+                <span class="meta-icon">⏱️</span>
+                <div class="meta-content">
+                    <strong>视频时长</strong>
+                    <span>120秒（2分钟）</span>
+                </div>
+            </div>
+            <div class="meta-item">
+                <span class="meta-icon">🎯</span>
+                <div class="meta-content">
+                    <strong>视频类型</strong>
+                    <span>实拍演示 + 快速剪辑</span>
+                </div>
+            </div>
+            <div class="meta-item">
+                <span class="meta-icon">📱</span>
+                <div class="meta-content">
+                    <strong>目标平台</strong>
+                    <span>短视频平台</span>
+                </div>
+            </div>
+            <div class="meta-item">
+                <span class="meta-icon">🎨</span>
+                <div class="meta-content">
+                    <strong>视频风格</strong>
+                    <span>实用干货、专业可信</span>
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#intro">开场</a></li>
+                <li><a href="#three-steps">三步法</a></li>
+                <li><a href="#four-points">四大核心点</a></li>
+                <li><a href="#reject">否决项</a></li>
+                <li><a href="#checklist">签字清单</a></li>
+                <li><a href="#prep">拍摄准备</a></li>
+                <li><a href="#tips">拍摄技巧</a></li>
+                <li><a href="#publish">发布优化</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <!-- 开场直击痛点 -->
+            <section class="section" id="intro">
+                <h2>【0-10秒】开场直击痛点</h2>
+                <div class="subsection">
+                    <p><strong>BGM：</strong>开场紧张节奏，后转入轻快背景音乐</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 10%;">时间</th>
+                                <th style="width: 30%;">画面内容</th>
+                                <th style="width: 15%;">运镜/景别</th>
+                                <th style="width: 25%;">台词/解说</th>
+                                <th style="width: 20%;">字幕/特效</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="time-badge">0-3s</span></td>
+                                <td>画面：新安装的铝柜，然后快速切换到划痕、变形、缝隙大的问题特写</td>
+                                <td>快速剪辑，对比明显</td>
+                                <td class="dialogue">（音效：问题出现时"咔嚓"声）</td>
+                                <td><strong>字幕：</strong><br>刚装的铝柜就出问题？</td>
+                            </tr>
+                            <tr>
+                                <td><span class="time-badge">3-7s</span></td>
+                                <td>主角站在铝柜前，表情严肃</td>
+                                <td>中景，正面</td>
+                                <td class="dialogue">"花了定制全屋铝柜，结果这些地方没检查好，后悔都来不及！"</td>
+                                <td><strong>字幕：</strong><br>这8点必须检查！</td>
+                            </tr>
+                            <tr>
+                                <td><span class="time-badge">7-10s</span></td>
+                                <td>快速闪过8个检查点的图标/数字</td>
+                                <td>特效叠加，快节奏</td>
+                                <td class="dialogue">"今天教大家120秒学会铝柜验收，记不住就收藏起来！"</td>
+                                <td><strong>字幕：</strong><br>⏱️ 120秒全流程<br>👇 立即开始</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 快速检查三步法 -->
+            <section class="section" id="three-steps">
+                <h2>【10-25秒】快速检查三步法</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;">时间</th>
+                            <th style="width: 30%;">画面内容</th>
+                            <th style="width: 15%;">运镜/景别</th>
+                            <th style="width: 25%;">台词/解说</th>
+                            <th style="width: 20%;">字幕/特效</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="time-badge">10-13s</span></td>
+                            <td>主角面对铝柜，用手指出动作方向</td>
+                            <td>中景</td>
+                            <td class="dialogue">"验收其实就三步：看、动、查"</td>
+                            <td><strong>字幕：</strong><br>第1步：看 👀</td>
+                        </tr>
+                        <tr>
+                            <td><span class="time-badge">13-16s</span></td>
+                            <td><strong>【看】实拍展示：</strong><br>- 迎光看柜门表面平整度<br>- 快速扫视缝隙是否均匀<br>- 检查表面有无划痕色差</td>
+                            <td>手持镜头，第一视角，快速扫视</td>
+                            <td class="dialogue">"先整体看：表面有无划痕、色差，缝隙是否均匀"</td>
+                            <td><strong>字幕：</strong><br>✅ 表面无瑕疵<br>✅ 缝隙2-4mm均匀</td>
+                        </tr>
+                        <tr>
+                            <td><span class="time-badge">16-19s</span></td>
+                            <td><strong>【动】实拍展示：</strong><br>- 打开所有柜门（快速）<br>- 拉出抽屉<br>- 轻推柜体</td>
+                            <td>手持镜头，流畅跟拍</td>
+                            <td class="dialogue">"再动手试：门好不好开，抽屉顺不顺，柜体稳不稳"</td>
+                            <td><strong>字幕：</strong><br>第2步：动 👋<br>✅ 开合顺畅<br>✅ 无晃动</td>
+                        </tr>
+                        <tr>
+                            <td><span class="time-badge">19-22s</span></td>
+                            <td><strong>【查】实拍展示：</strong><br>- 用水平仪检测<br>- 用尺测量缝隙</td>
+                            <td>特写镜头，工具特写</td>
+                            <td class="dialogue">"最后工具查：用水平仪、卷尺精测，数据不会骗人"</td>
+                            <td><strong>字幕：</strong><br>第3步：查 🔧<br>✅ 垂直度≤2mm</td>
+                        </tr>
+                        <tr>
+                            <td><span class="time-badge">22-25s</span></td>
+                            <td>三步检查完成后，主角比✅手势</td>
+                            <td>中景</td>
+                            <td class="dialogue">"三步搞定基础检查，但这还不够！"</td>
+                            <td><strong>字幕：</strong><br>⚠️ 还有4个关键点！</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- 四大核心验收点 -->
+            <section class="section" id="four-points">
+                <h2>【25-55秒】四大核心验收点（快速实拍）</h2>
+
+                <div class="subsection">
+                    <h3>📍 第1点：外观和尺寸（10秒）</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 10%;">时间</th>
+                                <th style="width: 30%;">画面内容</th>
+                                <th style="width: 15%;">运镜/景别</th>
+                                <th style="width: 25%;">台词/解说</th>
+                                <th style="width: 20%;">字幕/特效</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="time-badge">25-28s</span></td>
+                                <td><strong>实拍：</strong><br>- 手电筒侧照检查表面划痕<br>- 用手触摸边角</td>
+                                <td>特写镜头，触感真实</td>
+                                <td class="dialogue">"第一，外观细节：用电筒侧照检查划痕，边角必须圆润无毛刺"</td>
+                                <td><strong>字幕：</strong><br>① 外观细节<br>⚡ 边角R≥2mm<br>🚫 拒绝锐角</td>
+                            </tr>
+                            <tr>
+                                <td><span class="time-badge">28-32s</span></td>
+                                <td><strong>实拍：</strong><br>- 水平仪靠在柜体侧面<br>- 读取数值</td>
+                                <td>特写水平仪气泡</td>
+                                <td class="dialogue">"用水平仪测垂直，偏差超过2毫米必须要求调平！"</td>
+                                <td><strong>字幕：</strong><br>⚡ 垂直度≤2mm<br>🚫 >5mm拒签</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3>📍 第2点：五金配件（10秒）</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 10%;">时间</th>
+                                <th style="width: 30%;">画面内容</th>
+                                <th style="width: 15%;">运镜/景别</th>
+                                <th style="width: 25%;">台词/解说</th>
+                                <th style="width: 20%;">字幕/特效</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="time-badge">32-35s</span></td>
+                                <td><strong>实拍：</strong><br>- 快速开关柜门3次<br>- 特写铰链缓冲效果</td>
+                                <td>特写慢动作展示缓冲</td>
+                                <td class="dialogue">"第二，五金件：连续开关几次，听异响、看缓冲，必须丝滑无声"</td>
+                                <td><strong>字幕：</strong><br>② 五金配件<br>⚡ 连续开关10次<br>✅ 丝滑无声</td>
+                            </tr>
+                            <tr>
+                                <td><span class="time-badge">35-37s</span></td>
+                                <td><strong>实拍：</strong><br>- 拉出抽屉装重物<br>- 检查是否下沉</td>
+                                <td>全景展示承重测试</td>
+                                <td class="dialogue">"抽屉装满后不能下沉，轨道要承重15公斤以上"</td>
+                                <td><strong>字幕：</strong><br>⚡ 抽屉承重≥15kg<br>🚫 下沉=不合格</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3>📍 第3点：功能测试（10秒）</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 10%;">时间</th>
+                                <th style="width: 30%;">画面内容</th>
+                                <th style="width: 15%;">运镜/景别</th>
+                                <th style="width: 25%;">台词/解说</th>
+                                <th style="width: 20%;">字幕/特效</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="time-badge">37-40s</span></td>
+                                <td><strong>实拍：</strong><br>- 两个柜门同时打开<br>- 检查是否碰撞</td>
+                                <td>中景，多角度</td>
+                                <td class="dialogue">"第三，功能测试：柜门之间、门和抽屉不能互相碰撞干涉"</td>
+                                <td><strong>字幕：</strong><br>③ 功能测试<br>⚡ 无干涉碰撞<br>✅ 可同时使用</td>
+                            </tr>
+                            <tr>
+                                <td><span class="time-badge">40-43s</span></td>
+                                <td><strong>实拍：</strong><br>- 层板上放重物<br>- 24小时后对比（快进）</td>
+                                <td>定点拍摄 + 时间轴</td>
+                                <td class="dialogue">"层板承重30公斤，24小时后不能有永久变形"</td>
+                                <td><strong>字幕：</strong><br>⚡ 层板承重≥30kg<br>⏱️ 24h测试</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="subsection">
+                    <h3>📍 第4点：安全固定（10秒）</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 10%;">时间</th>
+                                <th style="width: 30%;">画面内容</th>
+                                <th style="width: 15%;">运镜/景别</th>
+                                <th style="width: 25%;">台词/解说</th>
+                                <th style="width: 20%;">字幕/特效</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="time-badge">43-47s</span></td>
+                                <td><strong>实拍：</strong><br>- 用力推柜体<br>- 展示固定点</td>
+                                <td>手持镜头，真实晃动感</td>
+                                <td class="dialogue">"第四，安全最重要：用力推柜体不能晃，每米至少2个固定点！"</td>
+                                <td><strong>字幕：</strong><br>④ 安全固定<br>⚡ 每米≥2个固定点<br>🚫 晃动=拒签</td>
+                            </tr>
+                            <tr>
+                                <td><span class="time-badge">47-50s</span></td>
+                                <td><strong>实拍：</strong><br>- 检查玻璃3C标识<br>- 边角圆角特写</td>
+                                <td>特写玻璃标识</td>
+                                <td class="dialogue">"玻璃必须有3C钢化标识，所有外露边角必须倒角圆滑"</td>
+                                <td><strong>字幕：</strong><br>⚡ 3C钢化标识<br>⚡ 边角倒角圆润</td>
+                            </tr>
+                            <tr>
+                                <td><span class="time-badge">50-55s</span></td>
+                                <td>主角总结四大点</td>
+                                <td>中景，强调语气</td>
+                                <td class="dialogue">"这四点有问题，千万别签字，要求整改后再验！"</td>
+                                <td><strong>字幕：</strong><br>⚠️ 不合格=拒签</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 关键否决项 -->
+            <section class="section" id="reject">
+                <h2>【55-85秒】关键否决项 + 常见坑</h2>
+
+                <div class="warning-box">
+                    <h4>🚫 关键否决项 - 出现任一项直接拒签！</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 10%;">时间</th>
+                                <th style="width: 35%;">画面内容</th>
+                                <th style="width: 15%;">运镜/景别</th>
+                                <th style="width: 20%;">台词/解说</th>
+                                <th style="width: 20%;">字幕/特效</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="time-badge">55-60s</span></td>
+                                <td><strong>特效画面：</strong><br>- 红色警示背景<br>- 列出4大否决项</td>
+                                <td>动态文字+音效</td>
+                                <td class="dialogue">"记住这些关键否决项，有任何一项直接拒签！"</td>
+                                <td><strong>字幕：</strong><br>🚫 关键否决项<br>出现任一项直接拒签！</td>
+                            </tr>
+                            <tr>
+                                <td><span class="time-badge">60-65s</span></td>
+                                <td><strong>实拍+对比：</strong><br>- 合格vs不合格柜体对比<br>- 对角线测量演示</td>
+                                <td>分屏对比</td>
+                                <td class="dialogue">"柜体严重变形、对角线差超过10毫米，这种结构问题没法修"</td>
+                                <td><strong>字幕：</strong><br>❌ 对角线差>10mm<br>❌ 严重变形</td>
+                            </tr>
+                            <tr>
+                                <td><span class="time-badge">65-70s</span></td>
+                                <td><strong>实拍：</strong><br>- 尖锐边角特写<br>- 儿童触摸危险示意</td>
+                                <td>特写+危险标注</td>
+                                <td class="dialogue">"边角尖锐不倒角，有小孩的家庭特别危险！"</td>
+                                <td><strong>字幕：</strong><br>❌ 尖锐边角<br>⚠️ 儿童风险</td>
+                            </tr>
+                            <tr>
+                                <td><span class="time-badge">70-75s</span></td>
+                                <td><strong>实拍：</strong><br>- 柜门关不上特写<br>- 抽屉卡住演示</td>
+                                <td>特写故障</td>
+                                <td class="dialogue">"柜门关不严、抽屉拉不出，五金功能失效也是硬伤"</td>
+                                <td><strong>字幕：</strong><br>❌ 五金失效<br>❌ 功能故障</td>
+                            </tr>
+                            <tr>
+                                <td><span class="time-badge">75-80s</span></td>
+                                <td><strong>实拍：</strong><br>- 材质对比（薄vs厚铝材）</td>
+                                <td>对比展示</td>
+                                <td class="dialogue">"最后看材质，铝材偏薄、有锈点，跟合同不符也得拒"</td>
+                                <td><strong>字幕：</strong><br>❌ 材质不符<br>❌ 有锈蚀</td>
+                            </tr>
+                            <tr>
+                                <td><span class="time-badge">80-85s</span></td>
+                                <td>主角强调</td>
+                                <td>中景，严肃表情</td>
+                                <td class="dialogue">"这些都是原则问题，签字前必须全部解决！"</td>
+                                <td><strong>字幕：</strong><br>✅ 原则问题不让步</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 签字前必做清单 -->
+            <section class="section" id="checklist">
+                <h2>【85-105秒】签字前必做清单</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;">时间</th>
+                            <th style="width: 35%;">画面内容</th>
+                            <th style="width: 15%;">运镜/景别</th>
+                            <th style="width: 20%;">台词/解说</th>
+                            <th style="width: 20%;">字幕/特效</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="time-badge">85-90s</span></td>
+                            <td><strong>实拍快速演示：</strong><br>- 拍照记录问题</td>
+                            <td>手持拍摄，快速展示</td>
+                            <td class="dialogue">"验收通过前，一定要做这5件事"</td>
+                            <td><strong>字幕：</strong><br>📝 签字前必做5件事</td>
+                        </tr>
+                        <tr>
+                            <td><span class="time-badge">90-93s</span></td>
+                            <td><strong>实拍：</strong><br>- 对着问题部位拍照</td>
+                            <td>特写手机拍照</td>
+                            <td class="dialogue">"第一，所有问题部位拍照留证，特别是细节特写"</td>
+                            <td><strong>字幕：</strong><br>① 拍照留证<br>📸 问题特写</td>
+                        </tr>
+                        <tr>
+                            <td><span class="time-badge">93-96s</span></td>
+                            <td><strong>实拍：</strong><br>- 清点抽屉数量</td>
+                            <td>快速清点镜头</td>
+                            <td class="dialogue">"第二，清点所有抽屉、门板、五金件数量是否齐全"</td>
+                            <td><strong>字幕：</strong><br>② 清点数量<br>🔢 抽屉/门板/五金</td>
+                        </tr>
+                        <tr>
+                            <td><span class="time-badge">96-99s</span></td>
+                            <td><strong>实拍：</strong><br>- 测试所有可动部件</td>
+                            <td>快速剪辑测试画面</td>
+                            <td class="dialogue">"第三，每个抽屉、每扇门都要亲自开关测试"</td>
+                            <td><strong>字幕：</strong><br>③ 逐个测试<br>🚪 所有可动部件</td>
+                        </tr>
+                        <tr>
+                            <td><span class="time-badge">99-102s</span></td>
+                            <td><strong>实拍：</strong><br>- 检查质保卡盖章</td>
+                            <td>特写质保卡</td>
+                            <td class="dialogue">"第四，核对质保卡是否盖章清晰，质保期写清楚"</td>
+                            <td><strong>字幕：</strong><br>④ 核对质保<br>📋 盖章+期限</td>
+                        </tr>
+                        <tr>
+                            <td><span class="time-badge">102-105s</span></td>
+                            <td><strong>实拍：</strong><br>- 索要备件配件</td>
+                            <td>展示配件包</td>
+                            <td class="dialogue">"第五，索要所有备用五金件，坏了有地方换"</td>
+                            <td><strong>字幕：</strong><br>⑤ 索要备件<br>🔧 五金备用</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- 总结和结尾 -->
+            <section class="section" id="summary">
+                <h2>【105-120秒】总结 + 行动建议</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;">时间</th>
+                            <th style="width: 35%;">画面内容</th>
+                            <th style="width: 15%;">运镜/景别</th>
+                            <th style="width: 20%;">台词/解说</th>
+                            <th style="width: 20%;">字幕/特效</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="time-badge">105-108s</span></td>
+                            <td>主角站在验收完的铝柜前，微笑</td>
+                            <td>中景，正面</td>
+                            <td class="dialogue">"只要按这个流程验收，你的铝柜绝对没问题！"</td>
+                            <td><strong>字幕：</strong><br>✅ 验收通过</td>
+                        </tr>
+                        <tr>
+                            <td><span class="time-badge">108-112s</span></td>
+                            <td>快速回顾关键点闪回</td>
+                            <td>快速混剪</td>
+                            <td class="dialogue">"记住：看外观、查五金、测功能、保安全，四步到位"</td>
+                            <td><strong>字幕：</strong><br>📌 重点回顾<br>外观→五金→功能→安全</td>
+                        </tr>
+                        <tr>
+                            <td><span class="time-badge">112-115s</span></td>
+                            <td>主角拿出手机/清单</td>
+                            <td>特写</td>
+                            <td class="dialogue">"还是记不住？评论区扣'验收清单'，我把完整表格发你！"</td>
+                            <td><strong>字幕：</strong><br>👇 评论区扣"验收清单"<br>获取完整表格</td>
+                        </tr>
+                        <tr>
+                            <td><span class="time-badge">115-118s</span></td>
+                            <td>主角挥手再见，微笑</td>
+                            <td>中景</td>
+                            <td class="dialogue">"关注我，装修避坑不踩雷！下次讲XX验收"</td>
+                            <td><strong>字幕：</strong><br>❤️ 关注我<br>装修避坑不踩雷！</td>
+                        </tr>
+                        <tr>
+                            <td><span class="time-badge">118-120s</span></td>
+                            <td><strong>结束画面：</strong><br>- 频道Logo<br>- "收藏点赞"提示</td>
+                            <td>静态画面</td>
+                            <td class="dialogue">（背景音乐渐强）</td>
+                            <td><strong>字幕：</strong><br>⭐ 收藏 + 👍 点赞<br>🔔 转发给需要的朋友</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>BGM：</strong>轻快收尾音乐，淡出</p>
+            </section>
+
+            <!-- 拍摄准备清单 -->
+            <section class="section" id="prep">
+                <h2>🎬 拍摄准备清单</h2>
+
+                <div class="grid-container">
+                    <div class="card">
+                        <h4>📷 设备需求</h4>
+                        <ul class="checklist">
+                            <li>主机位：手机/相机（4K 60fps）</li>
+                            <li>辅助机位：固定机位拍全景</li>
+                            <li>补光灯：确保画面明亮清晰</li>
+                            <li>麦克风：领夹麦或指向麦</li>
+                            <li>三脚架：稳定拍摄</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>🏠 场景需求</h4>
+                        <ul class="checklist">
+                            <li>已安装好的全屋铝柜</li>
+                            <li>准备1-2个有问题柜子作对比</li>
+                            <li>验收工具：水平仪、卷尺、手电筒</li>
+                            <li>道具：重物（测承重）、手机</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>👤 人物准备</h4>
+                        <ul class="checklist">
+                            <li>验收师着装：整洁专业</li>
+                            <li>表情管理：严肃→认真→微笑</li>
+                            <li>肢体语言：手势明确，动作专业</li>
+                            <li>台词熟练：可使用提词器</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>📝 剪辑要点</h4>
+                        <ul class="checklist">
+                            <li>节奏快：120秒内40-50个镜头</li>
+                            <li>特效：字幕清晰、重点红色标注</li>
+                            <li>转场：快速切换，无多余转场</li>
+                            <li>BGM：轻快专业背景音乐</li>
+                            <li>音效：关键点添加提示音</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 拍摄进度表 -->
+            <section class="section" id="timeline">
+                <h2>📊 拍摄进度表（预计3.5小时）</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>场地布置（30分钟）</h4>
+                        <p>整理柜体、准备道具、布置灯光</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>开场拍摄（20分钟）</h4>
+                        <p>多拍几条选最好的，确保情绪到位</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>三步法拍摄（40分钟）</h4>
+                        <p>每个步骤多角度拍摄，特写+全景结合</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>四大核心点拍摄（60分钟）</h4>
+                        <p>重点环节，需要特写镜头展示细节</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>否决项对比（40分钟）</h4>
+                        <p>可能需要两个场景，合格vs不合格对比</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>签字前清单（30分钟）</h4>
+                        <p>快速演示拍摄，5个环节一气呵成</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>结尾拍摄（15分钟）</h4>
+                        <p>简单快速，CTA行动号召</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 拍摄技巧 -->
+            <section class="section" id="tips">
+                <h2>💡 拍摄技巧</h2>
+
+                <div class="grid-container">
+                    <div class="card">
+                        <h4>🎯 运镜技巧</h4>
+                        <ul>
+                            <li><span class="tag">第一视角</span> 手持镜头模拟验收视角，增强代入感</li>
+                            <li><span class="tag">特写优先</span> 关键检查点必须特写（边角、铰链、水平仪）</li>
+                            <li><span class="tag">对比展示</span> 合格vs不合格放一起对比</li>
+                            <li><span class="tag">快速剪辑</span> 单个镜头不超过3秒</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>💡 灯光布置</h4>
+                        <ul>
+                            <li><span class="tag">主光</span> 从侧前方打光，突出表面细节</li>
+                            <li><span class="tag">补光</span> 检查缝隙时用补光灯侧照</li>
+                            <li><span class="tag">逆光</span> 检查划痕时用手电筒侧逆光</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>🎤 收音要点</h4>
+                        <ul>
+                            <li><span class="tag">环境</span> 安静，避免回声</li>
+                            <li><span class="tag">麦克风</span> 使用外接麦克风，音质清晰</li>
+                            <li><span class="tag">语速</span> 后期配音注意语速和节奏</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>🎨 视觉设计</h4>
+                        <ul>
+                            <li><span class="tag">字幕</span> 清晰易读，重点用红色/黄色标注</li>
+                            <li><span class="tag">特效</span> ⚠️ ✅ ❌ 🚫 等符号增强可读性</li>
+                            <li><span class="tag">对比</span> 分屏展示合格vs不合格</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 发布优化建议 -->
+            <section class="section" id="publish">
+                <h2>📱 发布优化建议</h2>
+
+                <div class="highlight-box">
+                    <h4>🏷️ 标题优化（多版本测试）</h4>
+                    <ol style="margin-left: 20px; line-height: 2;">
+                        <li>"全屋铝柜验收：这8点不检查，后悔一整年！"</li>
+                        <li>"定制铝柜必看！120秒学会专业验收"</li>
+                        <li>"装修师傅不会告诉你的铝柜验收秘密"</li>
+                        <li>"花了5万装铝柜，验收时差点被坑..."</li>
+                        <li>"全屋铝柜验收清单，不签字前必看！"</li>
+                    </ol>
+                </div>
+
+                <div class="grid-container">
+                    <div class="card">
+                        <h4>🎨 封面设计</h4>
+                        <ul>
+                            <li><strong>主图：</strong>验收师正在检查的特写</li>
+                            <li><strong>文字：</strong>"验收必看"或"避坑指南"</li>
+                            <li><strong>配色：</strong>红色/黄色醒目标题</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>#️⃣ 话题标签</h4>
+                        <p>
+                            <span class="tag">#装修验收</span>
+                            <span class="tag">#全屋定制</span>
+                            <span class="tag">#铝柜</span>
+                            <span class="tag">#避坑指南</span>
+                            <span class="tag">#装修干货</span>
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h4>⏰ 发布时间</h4>
+                        <ul>
+                            <li><strong>工作日：</strong>12:00-13:00 或 19:00-21:00</li>
+                            <li><strong>周末：</strong>10:00-12:00 或 15:00-17:00</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>📈 后续内容规划</h4>
+                        <ul>
+                            <li>Episode 2: 铝柜保养清洁指南</li>
+                            <li>Episode 3: 铝柜vs全屋柜对比</li>
+                            <li>Episode 4: 铝柜定制避坑（合同篇）</li>
+                            <li>Episode 5: 铝柜五金件更换教程</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 成功指标 -->
+            <section class="section" id="metrics">
+                <h2>📊 成功指标（发布后追踪）</h2>
+                <div class="grid-container">
+                    <div class="card">
+                        <h4>🎯 核心指标</h4>
+                        <ul class="checklist">
+                            <li>播放量：>10,000（72小时内）</li>
+                            <li>点赞率：>5%</li>
+                            <li>收藏率：>3%</li>
+                            <li>完播率：>40%</li>
+                            <li>互动率：>8%</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>💬 互动目标</h4>
+                        <ul class="checklist">
+                            <li>评论数：>50条</li>
+                            <li>转发数：>20次</li>
+                            <li>关注增长：>100人</li>
+                            <li>私信咨询：>10条</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 注意事项 -->
+            <section class="section" id="warnings">
+                <h2>⚠️ 注意事项</h2>
+
+                <div class="warning-box">
+                    <h4>⚖️ 法律风险</h4>
+                    <ul>
+                        <li>不诋毁具体品牌/商家</li>
+                        <li>使用"可能存在"、"建议"等客观表述</li>
+                        <li>问题展示可使用演示样品，避免曝光真实商家</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <h4>📚 专业性</h4>
+                    <ul>
+                        <li>数据标准需有依据（参考国标或行业标准）</li>
+                        <li>不确定的参数不乱说</li>
+                        <li>建议用户"以合同约定为准"</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <h4>🔧 实用性</h4>
+                    <ul>
+                        <li>通用工具（水平仪、卷尺）观众容易获得</li>
+                        <li>测试方法简单易操作</li>
+                        <li>避免需要专业设备的检测方法</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p><strong>全屋铝柜验收视频拍摄脚本</strong></p>
+            <p>版本：v1.0 | 创建日期：2026-02-04</p>
+            <p style="margin-top: 15px; opacity: 0.8;">🎬 让专业验收变得简单易懂</p>
+        </footer>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">🖨️ 打印脚本</button>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 点击复选框交互
+        document.querySelectorAll('.checklist li').forEach(item => {
+            item.addEventListener('click', function() {
+                this.style.background = this.style.background === 'rgb(232, 245, 233)' ? '' : 'rgb(232, 245, 233)';
+                this.style.borderLeft = this.style.borderLeft === '4px solid rgb(76, 175, 80)' ? '' : '4px solid rgb(76, 175, 80)';
+            });
+        });
+    </script>
+</body>
+</html>

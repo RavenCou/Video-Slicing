@@ -1,0 +1,47 @@
+{
+  "table_columns": [
+    {
+      "key": "序号",
+      "type": "number",
+      "required": true,
+      "description": "分镜编号，从1开始"
+    },
+    {
+      "key": "时段",
+      "type": "text",
+      "required": true,
+      "description": "镜头在视频中的时间段，格式为 00:00-00:00（分:秒-分:秒）",
+      "example": "00:05-00:12"
+    },
+    {
+      "key": "台词",
+      "type": "text",
+      "required": true,
+      "description": "字幕或语音内容"
+    },
+    {
+      "key": "景别",
+      "type": "enum",
+      "required": true,
+      "options": ["特写", "近景", "中景", "全景", "远景"],
+      "description": "镜头景别"
+    },
+    {
+      "key": "分镜名称",
+      "type": "text",
+      "required": true,
+      "max_length": 10,
+      "description": "3-5字概括该镜头内容"
+    },
+    {
+      "key": "画面描述",
+      "type": "text",
+      "required": true,
+      "min_length": 30,
+      "max_length": 150,
+      "description": "详细描述画面内容（主体、动作、背景、运镜等），50-100字"
+    }
+  ],
+  "output_format": "markdown_table",
+  "version": "1.0.0"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "viral-video-analyzer",
+  "version": "1.0.0",
+  "description": "爆款视频拆解仿写工具",
+  "main": "skill.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "video",
+    "analysis",
+    "script",
+    "ai"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}
